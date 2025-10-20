@@ -11,10 +11,12 @@ export default function MyProfile() {
 
   return (
     <>
-      <h1 className="mb-14 text-3xl font-medium text-richblack-5">
+      <h1 className="mb-8 sm:mb-14 text-2xl sm:text-3xl lg:text-3xl font-medium text-richblack-5">
         My Profile
       </h1>
-      <div className="flex items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
+
+      {/* Profile Card */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-0 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6 sm:px-12">
         <div className="flex items-center gap-x-4">
           <img
             src={user?.image}
@@ -30,21 +32,19 @@ export default function MyProfile() {
         </div>
         <IconBtn
           text="Edit"
-          onclick={() => {
-            navigate("/dashboard/settings")
-          }}
+          onclick={() => navigate("/dashboard/settings")}
         >
           <RiEditBoxLine />
         </IconBtn>
       </div>
-      <div className="my-10 flex flex-col gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
-        <div className="flex w-full items-center justify-between">
+
+      {/* About Section */}
+      <div className="my-6 sm:my-10 flex flex-col gap-6 sm:gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6 sm:px-12">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
           <p className="text-lg font-semibold text-richblack-5">About</p>
           <IconBtn
             text="Edit"
-            onclick={() => {
-              navigate("/dashboard/settings")
-            }}
+            onclick={() => navigate("/dashboard/settings")}
           >
             <RiEditBoxLine />
           </IconBtn>
@@ -59,59 +59,54 @@ export default function MyProfile() {
           {user?.additionalDetails?.about ?? "Write Something About Yourself"}
         </p>
       </div>
-      <div className="my-10 flex flex-col gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
-        <div className="flex w-full items-center justify-between">
-          <p className="text-lg font-semibold text-richblack-5">
-            Personal Details
-          </p>
+
+      {/* Personal Details */}
+      <div className="my-6 sm:my-10 flex flex-col gap-6 sm:gap-y-10 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6 sm:px-12">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+          <p className="text-lg font-semibold text-richblack-5">Personal Details</p>
           <IconBtn
             text="Edit"
-            onclick={() => {
-              navigate("/dashboard/settings")
-            }}
+            onclick={() => navigate("/dashboard/settings")}
           >
             <RiEditBoxLine />
           </IconBtn>
         </div>
-        <div className="flex max-w-[500px] justify-between">
-          <div className="flex flex-col gap-y-5">
+
+        <div className="flex flex-col sm:flex-row sm:gap-x-10">
+          {/* Left Column */}
+          <div className="flex flex-col gap-y-4 sm:gap-y-5 sm:w-1/2">
             <div>
-              <p className="mb-2 text-sm text-richblack-600">First Name</p>
-              <p className="text-sm font-medium text-richblack-5">
-                {user?.firstName}
-              </p>
+              <p className="mb-1 sm:mb-2 text-sm text-richblack-600">First Name</p>
+              <p className="text-sm font-medium text-richblack-5">{user?.firstName}</p>
             </div>
             <div>
-              <p className="mb-2 text-sm text-richblack-600">Email</p>
-              <p className="text-sm font-medium text-richblack-5">
-                {user?.email}
-              </p>
+              <p className="mb-1 sm:mb-2 text-sm text-richblack-600">Email</p>
+              <p className="text-sm font-medium text-richblack-5">{user?.email}</p>
             </div>
             <div>
-              <p className="mb-2 text-sm text-richblack-600">Gender</p>
+              <p className="mb-1 sm:mb-2 text-sm text-richblack-600">Gender</p>
               <p className="text-sm font-medium text-richblack-5">
                 {user?.additionalDetails?.gender ?? "Add Gender"}
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-y-5">
+
+          {/* Right Column */}
+          <div className="flex flex-col gap-y-4 sm:gap-y-5 sm:w-1/2 mt-4 sm:mt-0">
             <div>
-              <p className="mb-2 text-sm text-richblack-600">Last Name</p>
-              <p className="text-sm font-medium text-richblack-5">
-                {user?.lastName}
-              </p>
+              <p className="mb-1 sm:mb-2 text-sm text-richblack-600">Last Name</p>
+              <p className="text-sm font-medium text-richblack-5">{user?.lastName}</p>
             </div>
             <div>
-              <p className="mb-2 text-sm text-richblack-600">Phone Number</p>
+              <p className="mb-1 sm:mb-2 text-sm text-richblack-600">Phone Number</p>
               <p className="text-sm font-medium text-richblack-5">
                 {user?.additionalDetails?.contactNumber ?? "Add Contact Number"}
               </p>
             </div>
             <div>
-              <p className="mb-2 text-sm text-richblack-600">Date Of Birth</p>
+              <p className="mb-1 sm:mb-2 text-sm text-richblack-600">Date Of Birth</p>
               <p className="text-sm font-medium text-richblack-5">
-                {formattedDate(user?.additionalDetails?.dateOfBirth) ??
-                  "Add Date Of Birth"}
+                {formattedDate(user?.additionalDetails?.dateOfBirth) ?? "Add Date Of Birth"}
               </p>
             </div>
           </div>

@@ -32,9 +32,9 @@ const timeline = [
 const TimelineSection = () => {
   return (
     <div>
-      <div className='flex flex-row gap-15 items-center'>
+      <div className='flex flex-wrap-reverse lg:flex-nowrap gap-20 items-center lg:w-[70%] lg:ml-[250px]'>
 
-        <div className='w-[45%] flex flex-col gap-5'>
+        <div className='w-[45%] ml-8 flex flex-col gap-5'>
             {
                 timeline.map( (element, index) => {
                     return (
@@ -70,7 +70,7 @@ const TimelineSection = () => {
 
                 <div className='flex gap-5 items-center px-7'>
                 <p className='text-3xl font-bold'>250</p>
-                    <p className='text-caribbeangreen-300 text-sm'>TYpe of Courses</p>
+                    <p className='text-caribbeangreen-300 text-sm'>Type of Courses</p>
                 </div>
 
             </div>
