@@ -1,31 +1,193 @@
-# React & Tailwind CSS Starter Pack
+# StudyNotion
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+StudyNotion is a full-stack ed-tech platform built using the MERN stack. It provides a seamless learning experience where students can explore and purchase courses while instructors can create and manage educational content.
 
-## Usage
+---
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+# Features
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+## Student Features
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+* User authentication and authorization
+* Browse available courses
+* Purchase courses
+* Watch course videos
+* Track learning progress
+* Update profile information
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+## Instructor Features
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+* Create and manage courses
+* Upload course content and videos
+* Edit and delete courses
+* View enrolled students
+* Manage instructor dashboard
 
-## Contributing
+## Authentication & Security
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+* JWT Authentication
+* Password hashing using bcrypt
+* Protected routes
+* OTP verification system
+
+## Additional Features
+
+* Responsive UI
+* Cloud media upload support
+* REST API architecture
+* MongoDB database integration
+
+---
+
+# Tech Stack
+
+## Frontend
+
+* React.js
+* Tailwind CSS
+* Redux Toolkit
+* React Router DOM
+* Axios
+
+## Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT
+* bcrypt
+
+## Other Tools
+
+* Cloudinary
+* Nodemailer
+* dotenv
+
+---
+
+# Folder Structure
+
+```bash
+StudyNotion/
+│
+├── client/                 # Frontend application
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── server/                 # Backend application
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+# Installation
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/chinmay21/studynotion.git
+cd studynotion
+```
+
+---
+
+# Backend Setup
+
+```bash
+cd server
+npm install
+```
+
+## Create a `.env` File
+
+```env
+PORT=5000
+MONGODB_URL=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+MAIL_HOST=your_mail_host
+MAIL_USER=your_mail_user
+MAIL_PASS=your_mail_password
+```
+
+## Run Backend Server
+
+```bash
+npm run dev
+```
+
+---
+
+# Frontend Setup
+
+```bash
+cd client
+npm install
+npm start
+```
+
+---
+
+# API Endpoints
+
+## Authentication Routes
+
+| Method | Endpoint                   | Description    |
+| ------ | -------------------------- | -------------- |
+| POST   | `/api/auth/signup`         | Register user  |
+| POST   | `/api/auth/login`          | Login user     |
+| POST   | `/api/auth/sendotp`        | Send OTP       |
+| POST   | `/api/auth/reset-password` | Reset password |
+
+## Course Routes
+
+| Method | Endpoint                    | Description     |
+| ------ | --------------------------- | --------------- |
+| GET    | `/api/course/getAllCourses` | Get all courses |
+| POST   | `/api/course/createCourse`  | Create course   |
+| PUT    | `/api/course/updateCourse`  | Update course   |
+| DELETE | `/api/course/deleteCourse`  | Delete course   |
+
+
+# Future Improvements
+
+* Live classes support
+* AI-based course recommendations
+* Certificate generation
+* Real-time chat system
+* Mobile application
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+---
+
+# Author
+
+Developed by Chinmay Dhaundiyal.
