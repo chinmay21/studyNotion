@@ -159,6 +159,18 @@ npm start
 | PUT    | `/api/course/updateCourse`  | Update course   |
 | DELETE | `/api/course/deleteCourse`  | Delete course   |
 
+---
+
+# Screenshots
+
+Add project screenshots here.
+
+```md
+![Home Page](./screenshots/home.png)
+![Dashboard](./screenshots/dashboard.png)
+```
+
+---
 
 # Future Improvements
 
