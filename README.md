@@ -1,4 +1,4 @@
-ji# StudyNotion
+# StudyNotion
 
 StudyNotion is a full-stack ed-tech platform built using the MERN stack. It provides a seamless learning experience where students can explore and purchase courses while instructors can create and manage educational content.
 
@@ -157,7 +157,20 @@ npm start
 | GET    | `/api/course/getAllCourses` | Get all courses |
 | POST   | `/api/course/createCourse`  | Create course   |
 | PUT    | `/api/course/updateCourse`  | Update course   |
-| DELETE | `/api/course/deleteCourse`  | Delete course
+| DELETE | `/api/course/deleteCourse`  | Delete course   |
+
+---
+
+# Screenshots
+
+Add project screenshots here.
+
+```md
+![Home Page](./screenshots/home.png)
+![Dashboard](./screenshots/dashboard.png)
+```
+
+---
 
 # Future Improvements
 
