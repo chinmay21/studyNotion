@@ -161,17 +161,6 @@ npm start
 
 ---
 
-# Screenshots
-
-Add project screenshots here.
-
-```md
-![Home Page](./screenshots/home.png)
-![Dashboard](./screenshots/dashboard.png)
-```
-
----
-
 # Future Improvements
 
 * Live classes support
